@@ -8,6 +8,12 @@ app = Flask(__name__)
 def generate_buzz():
     page = '<html><body><h1>'
     page += generator.generate_buzz()
+
+    page +='''<style>
+      body {
+      background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Lake_Quannapowitt.jpg/1200px-Lake_Quannapowitt.jpg");
+      background-repeat: repeat-y; }
+      </style>'''
     page += '</h1></body></html>'
     return page
 
